@@ -55,5 +55,4 @@ Python, Pandas, NumPy, Matplotlib (Jupyter Notebook)
 
 ## ✍️ Author
 
-Shelinna Dwiforizqi Usti — Program Studi Teknik Informatika
-Mini-Project Mata Kuliah Sains Data
+Shelinna Dwiforizqi Usti — Program Studi Teknik Informatika 2026
