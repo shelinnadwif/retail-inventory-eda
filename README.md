@@ -21,21 +21,21 @@ Sebuah toko retail ingin mengetahui produk mana saja yang berisiko menumpuk (ove
 
 ## 🔧 Tahapan Analisis
 
-1. **Pemeriksaan struktur data** — `.info()` dan pemetaan tipe data ke skala statistik (nominal/rasio).
-2. **Statistik deskriptif & distribusi awal** — `.describe()`, perbandingan mean vs median, histogram sisa stok sebelum dibersihkan.
-3. **Data cleaning** — mengisi nilai kosong pada `Sisa_Stok` dengan 0 (mengindikasikan barang habis), bukan menghapus baris.
-4. **Feature engineering** — membuat kolom `Status_Perputaran` (`Fast Moving` / `Slow Moving`) menggunakan `np.where()` berdasarkan ambang 500 unit terjual.
-5. **Visualisasi & storytelling** — diagram batang total sisa stok per kategori, dilengkapi narasi insight dan rekomendasi bisnis untuk manajemen.
+1. **Pemeriksaan struktur data** - `.info()` dan pemetaan tipe data ke skala statistik (nominal/rasio).
+2. **Statistik deskriptif & distribusi awal** - `.describe()`, perbandingan mean vs median, histogram sisa stok sebelum dibersihkan.
+3. **Data cleaning** - mengisi nilai kosong pada `Sisa_Stok` dengan 0 (mengindikasikan barang habis), bukan menghapus baris.
+4. **Feature engineering** - membuat kolom `Status_Perputaran` (`Fast Moving` / `Slow Moving`) menggunakan `np.where()` berdasarkan ambang 500 unit terjual.
+5. **Visualisasi & storytelling** - diagram batang total sisa stok per kategori, dilengkapi narasi insight dan rekomendasi bisnis untuk manajemen.
 
 ## 📊 Temuan Utama
 
-- Distribusi sisa stok **right-skewed** (mean 128.0 > median 110.0) — sebagian kecil produk menumpuk stok dalam jumlah besar.
+- Distribusi sisa stok **right-skewed** (mean 128.0 > median 110.0) - sebagian kecil produk menumpuk stok dalam jumlah besar.
 - **Kategori Kosmetik** memiliki total sisa stok tertinggi (2.563 unit), diikuti Makanan (2.281 unit).
-- **Tidak ada produk yang mencapai status Fast Moving** (penjualan tertinggi 469 unit, masih di bawah ambang 500) — mengindikasikan masalah perputaran stok yang menyeluruh, bukan hanya pada kategori tertentu.
+- **Tidak ada produk yang mencapai status Fast Moving** (penjualan tertinggi 469 unit, masih di bawah ambang 500) - mengindikasikan masalah perputaran stok yang menyeluruh, bukan hanya pada kategori tertentu.
 
 ## 💡 Rekomendasi Bisnis
 
-- Evaluasi ulang volume re-order, khususnya untuk kategori Kosmetik dan Makanan.
+- Mengkaji ulang volume re-order, khususnya untuk kategori Kosmetik dan Makanan.
 - Pertimbangkan promosi/bundling untuk mempercepat perputaran stok yang menumpuk.
 - Tinjau kembali ambang batas "Fast Moving" agar lebih realistis dengan skala penjualan toko saat ini.
 
